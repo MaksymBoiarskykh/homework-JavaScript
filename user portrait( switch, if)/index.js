@@ -2,11 +2,11 @@ const questionYear = prompt("What is your year of birth?");
 const questionCity = prompt("Which city do you live in?");
 const questionSport = prompt("What is your favorite sport?");
 
-if (questionYear == false) {
+if (questionYear === null) {
   alert("Шкода, що Ви не захотіли ввести свій рік нородження");
-} else if (questionCity == false) {
+} else if (questionCity === null) {
   alert("Шкода, що Ви не захотіли ввести свіє місто");
-} else if (questionSport == false) {
+} else if (questionSport === null) {
   alert("Шкода, що Ви не захотіли ввести свій олюблений вид спорту");
 } else {
   let userAge = 2023 - questionYear;
