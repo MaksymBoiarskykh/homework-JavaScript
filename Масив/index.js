@@ -1,17 +1,25 @@
 let userArray = [];
 
-// создание пустого массива
-userArray.length = prompt("задайте довжину массива");
-console.log(userArray);
+let userLength = prompt("задайте довжину массива");
+userArray.length = userLength;
+console.log(userArray, "пустий");
 
-// добавляние элементов
 userArray = prompt("задайте элементи массива через пробіл").split(" ");
-console.log(userArray);
 
-// сортировка
-const sortArray = userArray.sort();
-console.log(sortArray);
+if (userArray.length > userLength) {
+  console.log("кількість елементів більша ніж може вмістити массив");
+} else {
+  console.log(userArray, "з елементами користувача");
 
-// удаление
-sortArray.splice(1, 3);
-console.log(sortArray);
+  const sortArray = userArray.sort();
+  console.log(sortArray, "відсортований");
+
+  if (userArray.length > 3) {
+    sortArray.splice(1, 3);
+    console.log(sortArray, "обрізаний");
+  } else {
+    console.log(
+      "массив не містить елементи в діапозоні від 2 до 4, тому немає компонентів для видалення"
+    );
+  }
+}
