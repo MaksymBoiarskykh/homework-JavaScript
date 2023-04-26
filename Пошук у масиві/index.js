@@ -4,7 +4,7 @@ let arr = [
 ];
 const positiveArr = arr.filter((item) => item > 0);
 
-//  1, 4 завдання
+//  1 task
 let resultMult = 0;
 positiveArr.forEach((item) => (resultMult += item));
 
@@ -13,7 +13,7 @@ console.log(`
 кількість позитивних елементів = ${positiveArr.length}
 `);
 
-// 2 завдання
+// 2 task
 let minItem = 0;
 arr.forEach((item, index) => {
   if (item <= minItem) {
@@ -24,7 +24,7 @@ console.log(
   `мінімальний елемент = ${minItem}, його індекс = ${arr.indexOf(minItem)}`
 );
 
-// 3 завдання
+// 3 task
 let maxItem = 0;
 arr.forEach((item) => {
   if (item >= maxItem) {
@@ -35,11 +35,11 @@ console.log(
   `максимальний елемент = ${maxItem}, його індекс = ${arr.indexOf(maxItem)}`
 );
 
-// 4 завдання
+// 4 task
 console.log(
   `кількість негативних елементів = ${arr.length - positiveArr.length}`
 );
-// 5 завдання
+// 5 task
 let resultSum = 1;
 positiveArr.forEach((item) => {
   resultSum *= item;
