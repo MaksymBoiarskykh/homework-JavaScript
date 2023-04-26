@@ -1,3 +1,9 @@
+// 1. Дан масив [16,-37,54,-4,72,-56,47,4, -16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47] Знайти суму та кількість позитивних елементів.
+// 2. Знайти мінімальний елемент масиву та його порядковий номер.
+// 3. Знайти максимальний елемент масиву та його порядковий номер.
+// 4. Визначити кількість негативних елементів.
+// 5. Знайти добуток позитивних елементів.
+
 let arr = [
   16, -37, 54, -4, 72, -56, 47, 4, -16, 25, -37, 46, 4, -51, 27, -63, 4, -54,
   76, -4, 12, -35, 4, 47,
@@ -5,21 +11,20 @@ let arr = [
 const positiveArr = arr.filter((item) => item > 0);
 
 //  1 task
-let resultMult = 0;
-positiveArr.forEach((item) => (resultMult += item));
-
+const resultSum = positiveArr.reduce((sum, item) => (sum += item), 0);
 console.log(`
-сума позитивних елементів = ${resultMult}
+сума позитивних елементів = ${resultSum}
 кількість позитивних елементів = ${positiveArr.length}
 `);
 
 // 2 task
-let minItem = 0;
-arr.forEach((item, index) => {
-  if (item <= minItem) {
-    minItem = item;
+const minItem = arr.reduce((min, item) => {
+  if (item < min) {
+    min = item;
   }
+  return min;
 });
+
 console.log(
   `мінімальний елемент = ${minItem}, його індекс = ${arr.indexOf(minItem)}`
 );
@@ -39,9 +44,7 @@ console.log(
 console.log(
   `кількість негативних елементів = ${arr.length - positiveArr.length}`
 );
+
 // 5 task
-let resultSum = 1;
-positiveArr.forEach((item) => {
-  resultSum *= item;
-});
-console.log(`добуток позитивних елементів   = ${resultSum}`);
+const resultMult = positiveArr.reduce((sum, item) => (sum *= item), 1);
+console.log(`добуток позитивних елементів   = ${resultMult}`);
