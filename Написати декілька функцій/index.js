@@ -49,3 +49,36 @@ function cutLine(userLine, userCut) {
   return result.join("");
 }
 console.log(cutLine(" hello world", ["l", "h", "d"]));
+
+// 3 task
+
+function fillArray(
+  mainArrLength,
+  mainArrItem,
+  daughterArrLength,
+  daughterArrItem
+) {
+  if (
+    mainArrLength < mainArrItem.length ||
+    daughterArrLength < daughterArrItem.length
+  ) {
+    return console.log(
+      "the number of elements is greater than the length of the array"
+    );
+  }
+
+  let result = mainArrItem;
+  result.length = mainArrLength;
+
+  result = result.map((item) => {
+    if (item.length === 0) {
+      item = daughterArrItem;
+      item.length = daughterArrLength;
+    }
+    return item;
+  });
+
+  return result;
+}
+
+console.log(fillArray(7, [3, [], true, [], 25], 10, ["anna", "max", "julia"]));
