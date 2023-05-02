@@ -5,7 +5,7 @@ function generateKey(length, characters) {
 
   let result = [];
   for (let i = 0; i < length; i++) {
-    let item = Math.round(Math.random() * 35 + 1);
+    let item = Math.round(Math.random() * characters.length);
     result.push(charactersArray[item]);
   }
 
