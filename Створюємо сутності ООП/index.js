@@ -24,15 +24,20 @@ class Car {
     }
     this.owner = human;
   }
-}
 
-const firstUser = new Human("Julia", 33);
-firstUser.getInfo();
+  getInfo() {
+    console.log(
+      `Brand - ${this.brand}, model - ${this.model}, year of issue - ${this.yearOfIssue}, numberplate - ${this.numberplate}`
+    );
+    this.owner.getInfo();
+  }
+}
 
 const nissan = new Car("nissan", "leaf", 2013, 1540);
 nissan.createOwner(new Human("Anna", 20));
-console.log(nissan);
 
 const audi = new Car("audi", "S1", 2013, 3091);
 audi.createOwner(new Human("Max", 19));
-console.log(audi);
+
+nissan.getInfo();
+audi.getInfo();
