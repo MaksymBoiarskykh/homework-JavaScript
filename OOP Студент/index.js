@@ -1,9 +1,9 @@
 class Student {
-  constructor(nameStudent, yearOfBirth, marksStudent) {
-    this.nameStudent = nameStudent;
+  constructor(firstName, secondtName, yearOfBirth, marksStudent) {
+    this.firstName = firstName;
+    this.secondtName = secondtName;
     this.yearOfBirth = yearOfBirth;
     this.marksStudent = marksStudent;
-    this.attendance = Array(25);
   }
 
   getAge() {
@@ -14,6 +14,8 @@ class Student {
     let averageValue = gpa.calc(this.marksStudent);
     console.log(averageValue);
   }
+
+  attendance = Array(25);
   present() {
     attendance.create(this.attendance, true);
   }
@@ -63,7 +65,7 @@ class Attendance {
 }
 const attendance = new Attendance();
 
-const max = new Student("Max", 2004, [100, 100, 95, 90]);
+const max = new Student("Max", "TikTac", 2004, [100, 100, 95, 90]);
 
 // возраст
 max.getAge();
