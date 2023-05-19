@@ -19,15 +19,14 @@ class Flat {
 class Building {
   constructor(limitFlat) {
     this.limitFlat = limitFlat;
-    this.finishHouse = [];
   }
 
-  produceFlat(...flatArr) {
-    if (flatArr.length > this.limitFlat) {
-      this.finishHouse =
-        "the number of apartments is more than the house can fit";
+  finishHouse = [];
+  addFlat(flat) {
+    if (this.finishHouse.length >= this.limitFlat) {
+      console.log("Будинок повністю заповнений, зміни не будуть додані");
     } else {
-      this.finishHouse = flatArr;
+      this.finishHouse.push(flat);
     }
   }
 }
@@ -40,7 +39,9 @@ secondFlat.residents(new Human("Julia", "female"));
 secondFlat.residents(new Human("Andrey", "male"));
 
 let firstBuilding = new Building(4);
-firstBuilding.produceFlat(firstFlat, secondFlat);
+firstBuilding.addFlat(firstFlat);
+firstBuilding.addFlat(secondFlat);
+firstBuilding.addFlat(secondFlat);
 
 // Result
 console.log(firstBuilding.finishHouse);
