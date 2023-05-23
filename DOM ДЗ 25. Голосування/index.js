@@ -15,4 +15,4 @@ function createCounter(votingArr) {
     });
   });
 }
-console.log(createCounter(emogjiList));
+createCounter(emogjiList);
