@@ -1,0 +1,24 @@
+h3 {
+  padding: 10px 0;
+  margin: 0;
+}
+
+.comment-block {
+  padding: 10px 0;
+
+  margin: 10px 0;
+}
+
+.comment-block div {
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+}
+
+button {
+  background: blueviolet;
+  color: #fff;
+  padding: 5px 30px;
+  border-radius: 5px;
+  margin: 10px 0;
+  border: none;
+}
