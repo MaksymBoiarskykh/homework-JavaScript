@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <!-- 1 -->
+        <div>
+            <label for="first-name">First name:</label>
+            <input type="text" id="first-name" name="name">
+        </div>
+        <!-- 2 -->
+        <div>
+            <label for="second-name">Second name:</label>
+            <input type="text" id="second-name" name="surname">
+        </div>
+        <!-- 3 -->
+        <div>
+            <label for="birth">Date of birth:</label>
+            <input type="text" id="birth" name="birth">
+        </div>
+        <!-- 4 -->
+        <div>
+            <span>Geneder:</span>
+            <ul>
+                <li>
+                    <input type="radio" name="gender" id="male" value="male" />
+                    <label for="male">male</label>
+                </li>
+                <li>
+                    <input type="radio" name="gender" id="female" value="female" />
+                    <label for="female">female</label>
+                </li>
+            </ul>
+        </div>
+        <!-- 5 -->
+        <div>
+            <label for="town">Choose a town:</label>
+            <select id="town" name="town">
+                <option value="Dnipro">Dnipro</option>
+                <option value="Kyiv">Kyiv</option>
+                <option value="Lviv">Lviv</option>
+            </select>
+        </div>
+        <!-- 6 -->
+        <div>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="1" cols="20"></textarea>
+        </div>
+        <!-- 7 -->
+        <div>
+            <span>What languages ​​do you speak?</span>
+            <ul>
+                <li>
+                    <input type="checkbox" id="id1" name="ch" value="ukrainian" />
+                    <label for="id1">Ukrainian</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="id2" name="ch" value="english" />
+                    <label for="id2">English</label>
+                </li>
+            </ul>
+        </div>
+        <!-- 8 -->
+        <div class="btn">
+            <input type="button" value="send" placeholder="submit" />
+        </div>
+    </form>
+
+    <div class="result"></div>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
